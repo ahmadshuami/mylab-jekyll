@@ -11,6 +11,19 @@ body {
 
 .svg-icon { width: 16px; height: 16px; display: inline-block; fill: #414141;}
 
+img {
+    &[src~="thumbnail"] {
+        width: 400px;
+        height: auto;
+        display:block;
+        margin: 0 auto;
+    }
+  
+    &[src~="bordered"] {
+        border: 1px solid black;
+    }
+}
+
 #footer {
     text-align: center;
     margin: auto;
@@ -26,5 +39,15 @@ body {
     background-color: #ddd;
     border-radius: 25px;
     font-size: 15px;
+    margin-top: 10px;
     text-align: right;
+}
+
+@media (max-width: 600px) {
+    img {
+        &[src~="thumbnail"] {
+            width: 250px;
+            height: auto;
+        }
+    }
 }

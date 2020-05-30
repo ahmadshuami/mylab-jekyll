@@ -32,19 +32,55 @@ Or install it yourself as:
 ![](assets/images/my_lab02.jpg)
 
 ## Usage
-layouts
+### default layouts files
 - category.html
 - default.html
 - page.html
 - post.html
 
-includes
+### includes files
 - discussion.html
 - footer.html
 - header.html
 - navigation.html
 
-sass and assets.
+### pages
+
+Create about.md, categories.md, contact.md and index.html in your root directory (if not exist).
+
+__index.html__
+
+```
+---
+layout: default
+title: Posts
+---
+Index page
+```
+
+__about.md__
+
+```
+---
+layout: page
+title: About
+permalink: /about/
+---
+About page
+```
+
+__categories.md__
+
+```
+---
+layout: page
+title: Categories
+permalink: /categories/
+---
+{% for category in site.categories %}
+  - [{{category | first}}]({{site.url}}{{site.baseurl}}{{page.url}}{{category | first}})
+{% endfor %}
+```
 
 ## Contributing
 
@@ -55,9 +91,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/shuami
 To set up your environment to develop this theme, run `bundle install`.
 
 Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `my-lab.gemspec` accordingly.
 
 ## License
 

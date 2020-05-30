@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "my-lab"
-  spec.version       = "0.1.01"
+  spec.version       = "0.1.02"
   spec.authors       = ["shuamilabs"]
   spec.email         = ["shuamilabs@gmail.com"]
 

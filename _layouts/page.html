@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{site.language}}">
+
+{% include header.html %}
+
+<body>
+    <div id="main">
+        {% include navigation.html %}
+        <div id="content-left">
+            <h2>{{page.title}}</h2>
+            {% if content != ""  %}
+                {{content}}
+            {% endif %}
+        </div>
+        
+        {% include footer.html %}
+        
+    </div>
+</body>
+
+</html>

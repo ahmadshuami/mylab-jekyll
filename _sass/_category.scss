@@ -1,0 +1,27 @@
+#categories a {
+    background-color: grey;
+    text-decoration: none;
+    padding: 0.1em 0.5em 0.1em 0.5em;
+  
+    &:link, &:visited {
+        background-color: grey;
+        text-decoration: none;
+        padding: 0.1em 0.5em 0.1em 0.5em;
+    }
+  
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+#post-cat a {
+    background-color: #0a83ee!important;
+    color: #ffffff!important;
+    text-decoration: none;
+    padding: 0.1em 0.5em 0.1em 0.5em;
+    border-radius: 0;
+  
+    &:hover {
+        text-decoration: underline;
+    }
+}

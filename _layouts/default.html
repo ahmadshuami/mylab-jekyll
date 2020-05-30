@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{site.language}}">
+
+{% include header.html %}
+
+<body>
+    <div id="main">
+        {% include navigation.html %}
+        <div id="nav-main" class="cat-menu">
+            <div id="logo">
+                <a href="{{site.url}}{{site.baseurl}}/">
+                    <img src="{{site.url}}{{site.baseurl}}/assets/images/tanjak_sl_0.png" alt="Logo">
+                </a>
+            </div>
+        </div>
+        
+        <div id="content-left">
+            <h2>{{page.title}}</h2>
+            {{content}}
+        </div>
+
+        {% include footer.html %}
+
+    </div>
+</body>
+
+</html>

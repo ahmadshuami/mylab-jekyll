@@ -1,0 +1,42 @@
+# general info
+title: My-Lab
+owner: Shuami Labs
+email: shuamilabs@gmail.com
+description: A simple blogging theme
+baseurl: ""
+url: ""
+encoding: utf-8
+language: en
+theme: my-lab
+
+# pagination
+paginate: 2
+paginate_path: /page:num
+sort_field: 'date'
+sort_reverse: true
+limit: 0
+
+# socmed
+twitter_username:
+github_username: shuamilabs
+instagram_username: shuamilabs
+disqus_username: 
+
+# navigation
+permalink: pretty # /:year/:month/:day/:title/
+excerpt_separator: <!-- more -->
+
+# assets
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-feed
+  
+exclude:
+  - Gemfile
+  - Gemfile.lock

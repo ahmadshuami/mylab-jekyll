@@ -1,0 +1,45 @@
+---
+layout: default
+title: Posts
+---
+
+<!-- paginated posts -->
+{% for post in paginator.posts %}
+<div id="intro-post">
+  <a href="{{site.url}}{{site.baseurl}}{{post.url}}">
+    <h3>{{post.title}}</h3>
+  </a>
+  <i>posted on {{ post.date | date: "%-d %b %Y" }} by Ahmad Shuami in </i>
+
+  {% if post.categories.size > 0 %}
+    <!-- <p id="post-cat"><b>Categories:</b>&nbsp; -->
+        {% for category in post.categories %}
+        <a href="{{site.url}}{{site.baseurl}}/categories/{{category}}/">{{category}}</a>&nbsp;
+        {% endfor %}
+    <!-- </p> -->
+  {% endif %}
+
+  <p>
+    {% if post.excerpt %}
+      {{ post.excerpt }}
+    {% else %}
+      {{ post.content }}
+    {% endif %}
+  </p>
+</div>
+{% endfor %}
+
+<!-- pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">[ {{ paginator.page }}/{{ paginator.total_pages }} ]</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>

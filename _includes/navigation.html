@@ -1,0 +1,26 @@
+<div id="nav-top">
+    <div id="nav-menu-left">
+        <a href="https://github.com/{{site.github_username}}" target="_blank">
+            <svg class="svg-icon">
+            <use xlink:href="/assets/images/minima-social-icons.svg#github"></use>
+            </svg>
+        </a>
+        <a href="https://instagram.com/{{site.instagram_username}}" target="_blank">
+            <svg class="svg-icon">
+            <use xlink:href="/assets/images/minima-social-icons.svg#instagram"></use>
+            </svg>
+        </a>
+    </div>
+    
+    <div id="nav-menu-right">
+        <a href="{{site.url}}{{site.baseurl}}/">Home</a> /
+        <a href="{{site.url}}{{site.baseurl}}/about/">About</a> /
+        <a href="{{site.url}}{{site.baseurl}}/categories/">Categories</a>
+    </div>
+</div>
+
+<div id="nav" class="cat-menu">
+    {% for category in site.categories %}
+        <a href="{{site.url}}{{site.baseurl}}/categories/{{category | first}}/">{{category | first}}</a>&nbsp;
+    {% endfor %}
+</div>

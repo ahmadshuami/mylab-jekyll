@@ -28,10 +28,10 @@ Or install it yourself as:
     $ gem install my-lab
 
 ## Image
-![Main page](assets/images/my_lab01.png)
+![](assets/images/my_lab01.jpg)
+![](assets/images/my_lab02.jpg)
 
 ## Usage
-
 layouts
 - category.html
 - default.html

@@ -28,7 +28,7 @@ Or install it yourself as:
     $ gem install my-lab
 
 ## Image
-<img src="{{site.url}}{{site.baseurl}}/assets/images/my_lab01.png" alt="screenshot">
+![Image of main page](https://github.com/shuamilabs/mylab-jekyll/assets/images/my_lab01.png)
 
 ## Usage
 

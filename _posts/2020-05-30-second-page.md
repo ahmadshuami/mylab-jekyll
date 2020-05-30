@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Second Post"
-date:   2020-05-30 1:03:00 +0200
+date:   2020-05-30 13:00:00 +08:00
 categories: programming
 comments: true
 ---

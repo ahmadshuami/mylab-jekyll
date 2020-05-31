@@ -8,22 +8,6 @@
         {% include navigation.html %}
 
         <div id="content-left">
-            <!-- using jekyll-paginate -->
-            <!-- <h2>Category: {{page.category}}</h2>
-            {% assign content = page.content | strip_newlines %}
-            {% if content != ""  %}
-                {{content}}
-            {% endif %}
-            {% for post in site.categories[page.category] %}
-                <div id="intro-post">
-                    <a href="{{site.url}}{{site.baseurl}}{{post.url}}">
-                        <h3>{{post.title}}</h3>
-                    </a>
-                    <i>posted on {{ post.date | date: "%-d %b %Y" }} by Ahmad Shuami</i>
-                </div>
-            {% endfor %} -->
-
-            <!-- using jekyll-paginate-v2 -->
             <ul class="post-list">
                 {% for post in paginator.posts %}
                   <li>
@@ -49,7 +33,6 @@
                 {% endif %}
             </ul>
         {% endif %}
-
 
         {% include footer.html %}
         

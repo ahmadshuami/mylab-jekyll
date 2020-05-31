@@ -54,6 +54,8 @@ __index.html__
 ---
 layout: default
 title: Posts
+pagination: 
+  enabled: true
 ---
 Index page
 ```

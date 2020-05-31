@@ -28,8 +28,8 @@ Or install it yourself as:
     $ gem install my-lab
 
 ## Image
-![](assets/images/my_lab01.jpg)
-![](assets/images/my_lab02.jpg)
+![main page](/assets/images/my_lab01.jpg)
+![post page](/assets/images/my_lab02.jpg)
 
 ## Usage
 ### default layouts files

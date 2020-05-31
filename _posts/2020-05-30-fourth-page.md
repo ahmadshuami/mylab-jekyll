@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "First Post"
-date:   2020-05-29 13:00:00 +08:00
+title:  "Fourth Post"
+date:   2020-05-30 16:00:00 +08:00
 categories: system-admin
 comments: true
 ---
@@ -9,10 +9,6 @@ comments: true
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non aliquet urna. Nam auctor vulputate sodales. Nullam condimentum arcu lorem, nec porta tellus fermentum iaculis. Nullam et lorem vehicula, laoreet turpis porttitor, accumsan neque. Donec rutrum, sem nec laoreet suscipit, nibh justo blandit leo, vel imperdiet mi lectus eu mauris. Curabitur ac massa ac erat laoreet maximus. Suspendisse potenti.
 
 <!-- more -->
-
-{% highlight javascript %}
-document.write("JavaScript is a simple language for javatpoint learners");
-{% endhighlight %}
 
 Mauris diam urna, ullamcorper sed dui dictum, vulputate suscipit libero. Curabitur non quam sit amet risus feugiat tristique vel eu enim. Donec ac fringilla velit, vel interdum odio. In hac habitasse platea dictumst. In vestibulum porttitor eros nec posuere. Duis suscipit eros id orci scelerisque, quis luctus odio ullamcorper. In maximus convallis lacus ut ultrices. Donec bibendum, ante quis euismod mollis, felis urna suscipit arcu, ac finibus metus nulla et mi. Vivamus porta at risus et dignissim. Sed tincidunt tincidunt bibendum. Nunc quis lacus a quam tincidunt mattis. Nullam congue ex eget mauris mattis, ac venenatis urna porttitor. Sed porta ex turpis, eget fringilla orci tincidunt eget. Nunc ac hendrerit odio.
 

@@ -2,7 +2,7 @@
   margin: auto;
   padding-top: 5px;
   margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 
   a {
     &:link, &:visited {
@@ -15,18 +15,22 @@
     }
   }
 
-  .cust-code {
-    font-size: 14px;
-    background-color: #ececec;
-    padding: 5px 10px;
-    border-top: 3px double #000;
-    border-radius: 5px;
-    width: 100%;
-  }
+  // .cust-code {
+  //   font-size: 14px;
+  //   background-color: #ececec;
+  //   padding: 5px 10px;
+  //   border-top: 3px double #000;
+  //   border-radius: 5px;
+  //   width: 100%;
+  // }
 
 }
   
 #content {
     text-align: center;
     margin: auto;
+}
+
+.w-line {
+  border-bottom: 1px solid #ddd;
 }

@@ -45,11 +45,6 @@ a {
 #nav-menu-left {
   display: inline;
   a {
-    &:link, &:visited {
-      text-decoration: none;
-      color: #000;
-    }
-  
     &:hover {
       text-decoration: none;
     }
@@ -70,6 +65,23 @@ a {
 
 .cat-menu {
   font-size: 12px;
+}
+
+#home-menu {
+  display: inline;
+
+  img {
+    width: 16px;
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 @media (max-width: 420px) {

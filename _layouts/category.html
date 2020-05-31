@@ -6,8 +6,10 @@
 <body>
     <div id="main">
         {% include navigation.html %}
+
         <div id="content-left">
-            <h2>Category: {{page.category}}</h2>
+            <!-- using jekyll-paginate -->
+            <!-- <h2>Category: {{page.category}}</h2>
             {% assign content = page.content | strip_newlines %}
             {% if content != ""  %}
                 {{content}}
@@ -19,9 +21,36 @@
                     </a>
                     <i>posted on {{ post.date | date: "%-d %b %Y" }} by Ahmad Shuami</i>
                 </div>
-            {% endfor %}
+            {% endfor %} -->
+
+            <!-- using jekyll-paginate-v2 -->
+            <ul class="post-list">
+                {% for post in paginator.posts %}
+                  <li>
+                    <h3>→ <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+                    <i>posted on {{ post.date | date: "%-d %b %Y" }} by Ahmad Shuami</i>
+                  </li>
+                {% endfor %}
+            </ul>
         </div>
         
+        {% if paginator.total_pages > 1 %}
+            <div class="w-line"></div>
+            <ul class="pager">
+                {% if paginator.previous_page %}
+                <li class="previous">
+                    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+                </li>
+                {% endif %}
+                {% if paginator.next_page %}
+                <li class="next">
+                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+                </li>
+                {% endif %}
+            </ul>
+        {% endif %}
+
+
         {% include footer.html %}
         
     </div>

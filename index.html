@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Posts
+pagination: 
+  enabled: true
 ---
 
 <!-- paginated posts -->
@@ -12,11 +14,9 @@ title: Posts
   <i>posted on {{ post.date | date: "%-d %b %Y" }} by Ahmad Shuami in </i>
 
   {% if post.categories.size > 0 %}
-    <!-- <p id="post-cat"><b>Categories:</b>&nbsp; -->
-        {% for category in post.categories %}
+      {% for category in post.categories %}
         <a href="{{site.url}}{{site.baseurl}}/categories/{{category}}/">{{category}}</a>&nbsp;
-        {% endfor %}
-    <!-- </p> -->
+      {% endfor %}
   {% endif %}
 
   <p>
@@ -29,17 +29,18 @@ title: Posts
 </div>
 {% endfor %}
 
-<!-- pagination links -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
-  {% else %}
-    <span class="previous">Previous</span>
-  {% endif %}
-  <span class="page_number ">[ {{ paginator.page }}/{{ paginator.total_pages }} ]</span>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-  {% else %}
-    <span class="next ">Next</span>
-  {% endif %}
-</div>
+{% if paginator.total_pages > 1 %}
+  <ul class="pager">
+      {% if paginator.previous_page %}
+      <li class="previous">
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+      </li>
+      {% endif %}
+      {% if paginator.next_page %}
+      <li class="next">
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+      </li>
+      {% endif %}
+  </ul>
+{% endif %}
+
